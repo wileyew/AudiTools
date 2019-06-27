@@ -1,3 +1,3 @@
 # audiTools
 repository for voiceover on automation.
-The only other tool needed is the ability to enable Applescript to go through and use the code!
+The only other tool needed is to have the application Applescript available and ready to use on your local machine!
