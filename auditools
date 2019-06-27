@@ -1,0 +1,69 @@
+activate application "Google Chrome"
+
+tell application "Finder"
+	
+	set savePath to (the path to the desktop folder as text) & "record.m4a"
+	
+	tell application "QuickTime Player"
+		
+		activate
+		
+		set doku to new audio recording
+		
+		start doku
+		
+		delay 4
+		
+		tell application "VoiceOver" to activate
+		
+		
+		
+		tell application "Google Chrome" to open location "https://www.google.com"
+		
+		
+		
+		delay 10
+		
+		
+		
+		repeat 9 times
+			
+			
+			
+			tell application "System Events"
+				
+				
+				
+				delay 13
+				
+				
+				
+				keystroke tab
+				
+				
+				
+			end tell
+			
+			
+			
+			
+			
+		end repeat
+		
+		stop
+		
+		close
+		
+		tell application "VoiceOver" to quit
+		
+		stop doku
+		
+		set newDoc to last item of (documents whose name contains "Untitled")
+		
+		export newDoc in file savePath using settings preset "Audio Only"
+		
+		
+		
+	end tell
+	
+end tell
